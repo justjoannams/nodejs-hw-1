@@ -190,7 +190,7 @@ router.get("/verify/:verificationToken", async (req, res, next) => {
 });
 
 // Resend Verification Email
-router.post("/verify", authenticateToken, async (req, res, next) => {
+router.post("/verify", auth, async (req, res, next) => {
   try {
     const { email } = req.body;
 
